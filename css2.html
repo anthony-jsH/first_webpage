@@ -2,67 +2,18 @@
     <!--
         property : value    
     -->
-    <style>
-        
-        asdf {
-            font-size: 50px;
-        }
-        aass {
-            color:cadetblue;
-        }
-        .makered{
-            color:red;
-        }
-        #same{
-            color:blueviolet;
-        }
-        cutter{
-            border:none;
-            border-top:dotted 5px;
-            border-color:black;
-            display:block;
-        }
-        #left_bar ol{
-            border: 1px solid black;
-            padding: 10px;
-            padding-left: 30px;
-        }
-        @media (max-width:700px){
-            #article{
-                display:none;
-            }
-        }
-        @media (min-width:700px){
-            diiv{
-                display:none;
-            }
-        }
+<link rel="stylesheet" href="separate_css.css">
 
-        #left_bar{
-            display:grid;
-            grid-template-columns:200px 1fr;
-        }
-        #article{
-            border: 1px solid black;
-            margin-left: 5px;
-            padding-left: 10px;
-        }
-
-        diiv{
-            padding-left:30px;
-        }
-
-    </style>
 <script>
     function closing(){
         window.close();
     }
     function cat_alert(){
         var num = Math.random();
-        if (num < 0.95) alert("meow meow");
+        if (num < 0.90) alert("meow meow");
         else {
             alert("don't touch me");            
-            setTimeout(closing, 1000);
+            window.close();
         }
     }
 </script>
@@ -136,6 +87,13 @@
         </p>
 
         <cutter> </cutter>
+        <p>
+            if you use javascript, you can do some <mischief onclick="window.close()">장난질</mischief> to some elements of the webpage<br>
+            like i did on the image. <br> <br>
+            
+            also, if we use @media on css, we can make the webpage a little bit more responsive. try this and that on this webpage to see what I mean.<br>
+        </p>
+
     </div>
     <diiv>
         Too small...
