@@ -6,14 +6,15 @@
 
 <script>
     function closing(){
+        window.open('', '_self');
         window.close();
     }
     function cat_alert(){
         var num = Math.random();
-        if (num < 0.90) alert("meow meow");
+        if (num < 0.9) alert("meow meow");
         else {
             alert("don't touch me");            
-            window.close();
+            closing();
         }
     }
 </script>
@@ -88,7 +89,7 @@
 
         <cutter> </cutter>
         <p>
-            if you use javascript, you can do some <mischief onclick="window.close()">장난질</mischief> to some elements of the webpage<br>
+            if you use javascript, you can do some <mischief onclick="closing()">장난질</mischief> to some elements of the webpage<br>
             like i did on the image. <br> <br>
             
             also, if we use @media on css, we can make the webpage a little bit more responsive. try this and that on this webpage to see what I mean.<br>
