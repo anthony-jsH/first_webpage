@@ -1,10 +1,36 @@
 <head>
     <title> CSS page </title>    
     <meta charset="utf-8">
+    
+    <!--
+        property : value    
+    -->
     <style>
         a {
             color:aquamarine;
         }
+
+        asdf {
+            font-size: 50px;
+        }
+        aass {
+            color:cadetblue;
+        }
+        .makered{
+            color:red;
+        }
+
+        #same{
+            color:blueviolet;
+        }
+
+        cutter{
+            border:none;
+            border-top:dotted 5px;
+            border-color:black;
+            display:block;
+        }
+
     </style>
 </head>
 <body>
@@ -31,8 +57,29 @@
             not quite true though, you can also use <font> tag to change color if you want to use only html for some reason,
             but using CSS is a better choice. 
         -->
+        So you can make some letters <asdf> larger </asdf> or <aass> in other colors </aass> using CSS.
+        You can select some entities using "class" inside the tag. Select using .[class name]<br>
+        Also, there is "id" that you can use inside the tag. Select using #[id name]<br>
+        note that the id can only be used once.
+
+        <ul>
+            <li> <a href="index.html"> these </a> </li>
+            <li> <a href="index.html"> lead </a> </li>
+            <li> <a href="index.html" class="makered"> to the </a></li>
+            <li> <a href="index.html" id="same"> same </a> </li>
+            <li> <a href="index.html" class="makered"> link </a> </li>
+        </ul>
+
     </p>
 
+    <cutter> </cutter>
+
+    <p>
+        see that dotted line above?<br>
+        this is made possible by making a tag (whatever name you like, I chose "cutter")<br>
+        remember there is a property called display which has several options, block and inline being two among them.        
+    
+    </p>
 
 </body>
 
