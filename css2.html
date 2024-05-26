@@ -1,7 +1,4 @@
-<head>
-    <title> CSS page - better </title>    
-    <meta charset="utf-8">
-    
+<!doctype html>
     <!--
         property : value    
     -->
@@ -25,11 +22,22 @@
             border-color:black;
             display:block;
         }
-        ol{
+        #left_bar ol{
             border: 1px solid black;
             padding: 10px;
             padding-left: 30px;
         }
+        @media (max-width:700px){
+            #article{
+                display:none;
+            }
+        }
+        @media (min-width:700px){
+            diiv{
+                display:none;
+            }
+        }
+
         #left_bar{
             display:grid;
             grid-template-columns:200px 1fr;
@@ -40,8 +48,30 @@
             padding-left: 10px;
         }
 
+        diiv{
+            padding-left:30px;
+        }
 
     </style>
+<script>
+    function closing(){
+        window.close();
+    }
+    function cat_alert(){
+        var num = Math.random();
+        if (num < 0.95) alert("meow meow");
+        else {
+            alert("don't touch me");            
+            setTimeout(closing, 1000);
+        }
+    }
+</script>
+
+
+<head>
+    <title> CSS page - better </title>    
+    <meta charset="utf-8">
+    
 </head>
 <body>
     <div>
@@ -67,8 +97,9 @@
             It was here because this page was otherwise just a blank canvas, <br>
             but i like this image so I will just leave it here, unharmed.
         </p>
+        <div style="text-align: center;"> <img src="cute.png" onclick="cat_alert()"> </div>
+
         
-        <img src="cute.png">
 
         <p>
             <h2> What is CSS for? </h2>
@@ -106,5 +137,8 @@
 
         <cutter> </cutter>
     </div>
+    <diiv>
+        Too small...
+    </diiv>
 </body>
 
