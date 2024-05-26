@@ -5,17 +5,21 @@
 <link rel="stylesheet" href="separate_css.css">
 
 <script>
-    function closing(){
-        alert("closing...");
-        var win = window.open('', '_self');
-        win.close();
+    function change_cat(){
+        alert("The cat is ANGRY now");
+        const img = document.getElementById("thecat");
+        img.src='angry.png';
     }
     function cat_alert(){
         var num = Math.random();
-        if (num < 0.9) alert("meow meow");
+        const img = document.getElementById("thecat");
+        if (num < 0.9){
+            alert("meow meow");
+            img.src = 'cute.png';
+        }
         else {
-            alert("don't touch me");            
-            closing();
+            alert("don't touch me");
+            img.src='angry.png';
         }
     }
 </script>
@@ -50,7 +54,7 @@
             It was here because this page was otherwise just a blank canvas, <br>
             but i like this image so I will just leave it here, unharmed.
         </p>
-        <div style="text-align: center;"> <img src="cute.png" onclick="cat_alert()"> </div>
+        <div style="text-align: center;"> <img id="thecat" src="cute.png" onclick="cat_alert()"> </div>
 
         
 
@@ -90,7 +94,7 @@
 
         <cutter> </cutter>
         <p>
-            if you use javascript, you can do some <mischief onclick="closing()">장난질</mischief> to some elements of the webpage<br>
+            if you use javascript, you can do some <mischief onclick="change_cat()">장난질</mischief> to some elements of the webpage<br>
             like i did on the image. <br> <br>
             
             also, if we use @media on css, we can make the webpage a little bit more responsive. try this and that on this webpage to see what I mean.<br>
