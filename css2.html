@@ -1,0 +1,110 @@
+<head>
+    <title> CSS page - better </title>    
+    <meta charset="utf-8">
+    
+    <!--
+        property : value    
+    -->
+    <style>
+        
+        asdf {
+            font-size: 50px;
+        }
+        aass {
+            color:cadetblue;
+        }
+        .makered{
+            color:red;
+        }
+        #same{
+            color:blueviolet;
+        }
+        cutter{
+            border:none;
+            border-top:dotted 5px;
+            border-color:black;
+            display:block;
+        }
+        ol{
+            border: 1px solid black;
+            padding: 10px;
+            padding-left: 30px;
+        }
+        #left_bar{
+            display:grid;
+            grid-template-columns:200px 1fr;
+        }
+        #article{
+            border: 1px solid black;
+            margin-left: 5px;
+            padding-left: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="font-size:50px; text-align: center; border:5px solid rgb(76, 98, 93); margin:10px; padding-top:5px; padding-bottom:10px;"> CSS page </h1>
+    </div>
+    
+    <div id="left_bar">
+    <div>
+        <ol>
+            <li> <a href="index.html" title="main page"> back to main </a> </li>
+            <li> <a href="page1.html" title="page1"> page1</a> </li>
+            <li> <a href="css.html" title="css, worse version"> css (worse) </a></li>
+            <li> <a href="js.html" title="js"> js </a> </li>    
+        </ol>
+    </div>
+    <div id="article">
+        <p>
+            <h1 style="color:crimson"> Welcome to the CSS page! </h1>
+            this is page CSS <br>
+            This page is dedicated to CSS experiments <br> 
+            <br>
+            Here is a cute image of a cat <br>
+            It was here because this page was otherwise just a blank canvas, <br>
+            but i like this image so I will just leave it here, unharmed.
+        </p>
+        
+        <img src="cute.png">
+
+        <p>
+            <h2> What is CSS for? </h2>
+            The css is for making "prettier" webpages. <br>
+            Just like "script" tag designates what's inside to be javascript code, <br>
+            The "style" tag will tell the browser that what's inside is CSS code. <br>
+            Notice how the link to the main page has different color? this is possible because of CSS. <br>
+            <!--
+                not quite true though, you can also use <font> tag to change color if you want to use only html for some reason,
+                but using CSS is a better choice. 
+            -->
+            So you can make some letters <asdf> larger </asdf> or <aass> in other colors </aass> using CSS.
+            You can select some entities using "class" inside the tag. Select using .[class name]<br>
+            Also, there is "id" that you can use inside the tag. Select using #[id name]<br>
+            note that the id can only be used once.
+
+            <ul>
+                <li> <a href="index.html"> these </a> </li>
+                <li> <a href="index.html"> lead </a> </li>
+                <li> <a href="index.html" class="makered"> to the </a></li>
+                <li> <a href="index.html" id="same"> same </a> </li>
+                <li> <a href="index.html" class="makered"> link </a> </li>
+            </ul>
+
+        </p>
+
+        <cutter> </cutter>
+
+        <p>
+            see that dotted line above?<br>
+            this is made possible by making a tag (whatever name you like, I chose "cutter")<br>
+            remember there is a property called display which has several options, block and inline being two among them.        
+        
+        </p>
+
+        <cutter> </cutter>
+    </div>
+</body>
+
