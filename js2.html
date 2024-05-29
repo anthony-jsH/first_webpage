@@ -1,0 +1,91 @@
+<!doctype html>
+<link rel="stylesheet" href="separate_css.css">
+
+<script>
+    function night_mode(){
+        var cut = document.getElementsByTagName("cutter");
+        var randnum = Math.random();
+        var cutters = document.querySelectorAll("cutter");
+        var buttons = document.querySelectorAll("button");
+        if (randnum < 0.95){
+
+            if (document.body.style.background == "black") {
+                document.body.style.background = "white"; document.body.style.color = "black";
+                for (cut of cutters) {cut.style.borderColor = "black";}
+                for (button of buttons) {button.style.background = "rgb(230, 230, 230)";}
+                
+            }
+            else {
+                document.body.style.background = "black";
+                document.body.style.color = "gray";
+                for (cut of cutters) {cut.style.borderColor = "gray";}
+                for (button of buttons) {button.style.background = "rgb(100, 100, 100)";}
+            }
+        }
+        else{
+            alert("시렁");
+        }
+    }
+</script>
+
+
+<head>
+    <title> JavaScript </title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1 id='page_title'> JavaScript Practice </h1>
+<div id="left_bar">
+        <div id='list'>
+            <ol>
+                <li> <a href="better_index.html" title="main page"> main </a> </li>
+                <li> <a href="page1.html" title="link to the first page" > page1 </a> </li>
+                <li> <a href="css2.html" title="css practice" > css </a> </li>
+                <li> <a href="js2.html" title="js practice" > js </a> </li>
+                <li> <a href="css2.html" title="better CSS"> css2 </a></li>
+            </ol>
+        </div>
+
+    <div id='article'>
+    <p>
+
+        This page is dedicated to practicing javascript.
+        The reference is <a href="https://opentutorials.org/course/3085", target="_blank", title="생활코딩">here</a>.
+    </p>
+
+    <p>
+        <h2> 1. How to use Scripts </h2>
+        To use javascript, you simply use tag "script"<br>
+        if you push this button below, it will make an alert message to pop up.<br><br>
+        <button onclick="myalert()">This button</button>
+
+        <script>
+            function myalert() {alert("Like this!");}
+        </script>
+
+        <br> <br>
+        This buttons will handle events. <br>
+        These events start with "on", like onclick, onchange, onkeydown, ... etc etc.<br>
+        if you want to search google about this, you simply search for "JS Events" <br>
+        For example, you can even do this <br>
+        <button onclick="document.write('you clicked :>')"> What would happen? </button>
+
+    </p>
+    <cutter> </cutter>
+    <p>
+        <h2> What is JavaScript for? </h2>
+        So, why do we use javascript?<br>
+        The javascript is what we use in order to "control" the webpage. <br>
+        This means it will enable some alterations <br>  
+        for example, if you press this button below <br>
+        <button onclick="night_mode()">Press it! </button>
+        <br>
+        you will get night mode. press it back to get to day mode again. <br>
+
+    </p>    
+    
+    </div>
+    
+
+</div>
+</body>
